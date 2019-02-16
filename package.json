@@ -33,6 +33,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@types/react-fontawesome": "^1.6.4",
     "node-sass": "4.11.0"
   }
 }

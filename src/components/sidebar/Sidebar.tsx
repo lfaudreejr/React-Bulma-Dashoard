@@ -1,5 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import SidebarTabs from './tabs/SidebarTabs'
 import './Sidebar.sass';
 
 function Sidebar (props: object) {
@@ -20,35 +21,7 @@ function Sidebar (props: object) {
         </div>
       </div>
       <div className='app-sidebar__content'>
-        <div className='app-sidebar__tabs'>
-          <ul className='app-sidebar__tabs__wrapper'>
-            <li className='app-sidebar__tabs__tab active'>
-              <a>
-                <span className='tab-icon'><FontAwesomeIcon icon={['fas', 'home']}/></span>
-              </a>
-            </li>
-            <li className='app-sidebar__tabs__tab'>
-              <a>
-                <span className='tab-icon'><FontAwesomeIcon icon={['fas', 'comments']}/></span>
-              </a>
-            </li>
-            <li className='app-sidebar__tabs__tab'>
-              <a>
-                <span className='tab-icon'><FontAwesomeIcon icon={['fas', 'chart-pie']}/></span>
-              </a>
-            </li>
-            <li className='app-sidebar__tabs__tab'>
-              <a>
-                <span className='tab-icon'><FontAwesomeIcon icon={['fas', 'list']}/></span>
-              </a>
-            </li>
-            <li className='app-sidebar__tabs__tab'>
-              <a>
-                <span className='tab-icon'><FontAwesomeIcon icon={['fas', 'bell']}/></span>
-              </a>
-            </li>
-          </ul>
-        </div>
+        <SidebarTabs/>
       </div>
     </div>
   )
