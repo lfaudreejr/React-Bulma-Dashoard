@@ -1,0 +1,23 @@
+.App
+  height: 100%
+  font-family: Helvetica, Arial, "Lucida Grande", sans-serif
+
+.max-height
+  height: 100%
+
+.navbar
+  min-height: 75px
+
+@for $i from 0 through 5
+  .p-#{$i} { padding: 1em * $i }
+  .pl-#{$i} { padding-left: 1em * $i }
+  .pr-#{$i} { padding-right: 1em * $i }
+  .pb-#{$i} { padding-bottom: 1em * $i }
+  .pt-#{$i} { padding-top: 1em * $i }
+
+@for $i from 0 through 5
+  .m-#{$i} { margin: 1em * $i }
+  .mr-#{$i} { margin-right: 1em * $i }
+  .mb-#{$i} { margin-bottom: 1em * $i }
+  .mt-#{$i} { margin-top: 1em * $i }
+  .ml-#{$i} { margin-left: 1em * $i }

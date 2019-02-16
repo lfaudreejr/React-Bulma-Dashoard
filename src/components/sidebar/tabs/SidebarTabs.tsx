@@ -7,6 +7,7 @@ import SidebarChat from '../chat/SidebarChat';
 import SidebarStatistics from '../statistics/SidebarStatistics';
 import SidebarSocial from '../social/SidebarSocial';
 import SidebarAlerts from '../alerts/SidebarAlerts';
+import './SidebarTabs.sass';
 
 function SidebarTabs(props: Object) {
 	const tabs = [
