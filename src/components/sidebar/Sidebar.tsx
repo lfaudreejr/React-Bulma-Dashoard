@@ -5,7 +5,7 @@ import './Sidebar.sass';
 
 function Sidebar(props: object) {
 	return (
-		<div className="app-sidebar has-background-grey-darker">
+		<div className="app-sidebar">
 			<div className="app-sidebar__header">
 				<figure className="user-avatar image is-48x48">
 					<img className="is-rounded" src="https://larryfaudree.surge.sh/static/img/ME%20(3).e9132be.jpg" />

@@ -8,7 +8,6 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 
 library.add(fab);
 library.add(fas);
-
 class App extends Component {
 	render() {
 		return (
