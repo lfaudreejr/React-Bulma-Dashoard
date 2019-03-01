@@ -4,16 +4,24 @@ import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import SidebarListItem from '../SidebarListItem'
 interface SidebarListItemProps {
 	icon: IconProp,
-	name: string
+	name: string,
+	moreLinks?: Array<SidebarListItemProps>
 }
 
 const items: { [key: string]: SidebarListItemProps[] } = {
 	'pages': [
 		{ name: 'Dashboard', icon: 'tachometer-alt' },
-		{ name: 'Mailbox', icon: 'envelope' },
+		{ name: 'Mailbox', icon: 'envelope', moreLinks: [
+			{ name: 'Inbox', icon: 'download' },
+			{ name: 'Mail', icon: 'envelope-open' },
+			{ name: 'Compose', icon: 'comment-alt' }
+		] },
 		{ name: 'Gallery', icon: 'images' },
 		{ name: 'Social', icon: 'share-alt' },
-		{ name: 'Blog', icon: 'blog' }
+		{ name: 'Blog', icon: 'blog', moreLinks: [
+			{ name: 'Posts', icon: 'comments' },
+			{ name: 'Single Post', icon: 'comment-dots' }
+		] }
 	],
 	'components': [
 		{ name: 'Panels', icon: 'layer-group' },
@@ -40,18 +48,19 @@ function SidebarOverview(props: Object) {
 				<input className="input sidebar-search" type="text" placeholder="Search..." />
 			</div>
 			<div className="sidebar-overview__content">
-				{Object.keys(items).map(key => {
+				{Object.keys(items).map((key, index) => {
 					return (
-						<div>
-							<h3 className="sidebar-overview__content__header">{key.toUpperCase()}</h3>
-							<ul className="sidebar-overview__content__list">
+						<aside key={key} className="menu sidebar-overview__content__list">
+							<p className="menu-label sidebar-overview__content__list-label">{key.toUpperCase()}</p>
+							<ul className="menu-list">
 								{
 									items[key].map(function (item: SidebarListItemProps) {
-										return <SidebarListItem icon={item.icon} name={item.name} />
+										return <SidebarListItem key={item.name} icon={item.icon} name={item.name} moreLinks={item.moreLinks} />
 									})
 								}
 							</ul>
-						</div>
+							{index < Object.keys(items).length - 1 ? <hr></hr> : null}
+						</aside>
 					)
 				})}
 			</div>

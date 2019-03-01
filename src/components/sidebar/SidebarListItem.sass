@@ -1,27 +1,65 @@
-.sidebar-overview__content__list__item
-  border-style: none
-  box-sizing: border-box
-  color: #89949b
-  display: block
-  font-size: 16px
-  font-weight: normal
-  height: 45px
-  line-height: 16px
-  outline: none
-  padding: 15px 25px
-  text-decoration: none
-  text-shadow: none
-  letter-spacing: 1px
-  &:hover
-    background-color: #2a353c
-  .name
+
+.sidebar-overview__menu-item
+  .sidebar-overview__menu-item-content
+    text-shadow: none
+    letter-spacing: 1px
+    cursor: pointer
+    // background-color: rgba(0,0,0,.2)
+    border-style: none
     box-sizing: border-box
-    line-height: 18px
-    margin-left: 15px
-    vertical-align: top
-  .sidebar-icon
+    color: #89949b
+    display: block
+    font-size: 16px
+    height: 45px
+    line-height: 16px
+    outline: none
+    padding: 15px 25px
+    text-decoration: none
+    &:hover
+      color: #89949b
+      background-color: #2a353c
+    .name
+      box-sizing: border-box
+      line-height: 18px
+      margin-left: 15px
+      vertical-align: top
+    .sidebar-icon
+      box-sizing: border-box
+      display: inline-block
+      height: 19px
+      vertical-align: top
+      width: 18px
+  .sidebar-overview__menu-item__subcontent
+    margin-left: 33px
+    padding-left: 0px
+    border-color: #89949b
     box-sizing: border-box
-    display: inline-block
-    height: 19px
-    vertical-align: top
-    width: 18px
+    color: #89949b
+    display: block
+    font-size: 14px
+    line-height: 14px
+    outline: none
+    // padding: 15px 0 15px 25px
+    text-decoration: none
+    a
+      padding: 0px
+      position: relative
+      color: #89949b
+      margin-right: 25px
+      &:hover
+        color: #89949b
+        background-color: #2a353c
+      &:before
+        left: -1px
+        top: 18px
+        width: 15px
+        content: " "
+        position: absolute
+        display: inline-block
+        border-width: 1px
+        border-style: solid
+        border-color: #89949b
+        border-image: initial
+        z-index: 2
+      li
+        padding: 10px 15px
