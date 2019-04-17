@@ -25,19 +25,53 @@ const items: { [key: string]: SidebarListItemProps[] } = {
 	],
 	'components': [
 		{ name: 'Panels', icon: 'layer-group' },
-		{ name: 'Charts', icon: 'chart-bar' },
+		{ name: 'Charts', icon: 'chart-bar', moreLinks: [
+			{ name: 'Rubix Charts', icon: 'chart-bar' },
+			{ name: 'Chart.JS', icon: 'chart-line' },
+			{ name: 'C3.JS', icon: 'chart-area' },
+			{ name: 'Morris.JS', icon: 'chart-pie' }
+		] },
 		{ name: 'Static Timeline', icon: 'clock' },
 		{ name: 'Interactive Timeline', icon: 'stopwatch' },
 		{ name: 'Codemirror', icon: 'code' },
 		{ name: 'Maps', icon: 'map-marker-alt' },
 		{ name: 'Editor', icon: 'edit' },
-		{ name: 'UI Elements', icon: 'toggle-on' },
-		{ name: 'Forms', icon: 'paperclip' },
-		{ name: 'Tables', icon: 'table' },
+		{ name: 'UI Elements', icon: 'toggle-on', moreLinks: [
+			{ name: 'Buttons', icon: 'square' },
+			{ name: 'Dropdowns', icon: 'chevron-circle-down' },
+			{ name: 'Tabs & Navs', icon: 'location-arrow' },
+			{ name: 'Sliders', icon: 'sliders-h' },
+			{ name: 'Knobs', icon: 'circle' },
+			{ name: 'Modals', icon: 'window-maximize' },
+			{ name: 'Messenger', icon: 'comment' },
+		] },
+		{ name: 'Forms', icon: 'paperclip', moreLinks: [
+			{ name: 'Controls', icon: 'gamepad' },
+			{ name: 'X-Editable', icon: 'edit' },
+			{ name: 'Wizard', icon: 'magic' }
+		] },
+		{ name: 'Tables', icon: 'table', moreLinks: [
+			{ name: 'Bootstrap Tables', icon: 'th-large' },
+			{ name: 'Datatables', icon: 'th' },
+			{ name: 'Tablesaw', icon: 'table' }
+		] },
 		{ name: 'Grid', icon: 'th' },
 		{ name: 'Calendar', icon: 'calendar-alt' },
-		{ name: 'File Utilities', icon: 'file' },
+		{ name: 'File Utilities', icon: 'file', moreLinks: [
+			{ name: 'Dropzone', icon: 'angle-double-down' },
+			{ name: 'Image Cropping', icon: 'crop' }
+		] },
 		{ name: 'Fonts', icon: 'font' }
+	],
+	'extras': [
+		{ name: 'Login', icon: 'sign-in-alt' },
+		{ name: 'Signup', icon: 'user-plus' },
+		{ name: 'Lock Page', icon: 'lock' },
+		{ name: 'Invoice', icon: 'receipt' },
+		{ name: 'Pricing Tables', icon: 'tag' }
+	],
+	'documentation': [
+		{ name: 'Documentation', icon: 'folder' }
 	]
 }
 
