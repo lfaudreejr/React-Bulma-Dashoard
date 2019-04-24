@@ -77,15 +77,15 @@ const items: { [key: string]: SidebarListItemProps[] } = {
 
 function SidebarOverview(props: Object) {
 	return (
-		<div className="sidebar-overview">
+		<div className="sidebar-overview app-sidebar__content-container">
 			<div className="sidebar-overview__search">
 				<input className="input sidebar-search" type="text" placeholder="Search..." />
 			</div>
-			<div className="sidebar-overview__content">
+			<div className="sidebar-overview__content app-sidebar__nav-content">
 				{Object.keys(items).map((key, index) => {
 					return (
 						<aside key={key} className="menu sidebar-overview__content__list">
-							<p className="menu-label sidebar-overview__content__list-label">{key.toUpperCase()}</p>
+							<p className="menu-label sidebar-header">{key.toUpperCase()}</p>
 							<ul className="menu-list">
 								{
 									items[key].map(function (item: SidebarListItemProps) {

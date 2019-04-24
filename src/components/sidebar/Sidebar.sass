@@ -57,3 +57,53 @@
     box-sizing: border-box
     position: relative
     width: 100%
+
+.app-sidebar__content-container
+  overflow: auto
+  height: 100%
+  padding-bottom: 90px
+  width: 275px
+  .app-sidebar__nav-content
+    box-sizing: border-box
+    color: rgba(137,148,155,.4)
+    font-size: 12px
+    font-weight: 500
+    line-height: 1
+    .sidebar-header
+      padding-left: 20px
+    .nav-link
+      text-shadow: none
+      letter-spacing: 1px
+      cursor: pointer
+      // background-color: rgba(0,0,0,.2)
+      border-style: none
+      box-sizing: border-box
+      color: #89949b
+      display: flex
+      align-items: center
+      font-size: 16px
+      height: 45px
+      line-height: 16px
+      outline: none
+      padding: 15px 20px
+      text-decoration: none
+      &:hover
+        color: #89949b
+        background-color: #2a353c
+      .name
+        box-sizing: border-box
+        line-height: 18px
+        margin-left: 15px
+        vertical-align: top
+        width: 170px
+        display: inline-block
+        .count
+          padding: 0 5px
+          border-radius: 4px
+          color: #fff
+      .sidebar-icon
+        box-sizing: border-box
+        display: inline-block
+        height: 19px
+        vertical-align: top
+        width: 18px
