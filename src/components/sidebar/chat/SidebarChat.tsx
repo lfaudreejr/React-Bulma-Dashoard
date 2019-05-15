@@ -43,15 +43,15 @@ function SidebarChat(props: Object) {
       <div className="sidebar-chat__content app-sidebar__nav-content">
         {Object.keys(groupedItems).map((key, index) => {
           return (
-            <aside key={key} className="menu">
+            <aside key={index} className="menu">
               <p className="menu-label sidebar-header">
                 {key.toUpperCase()}
                 <span> ({groupedItems[key].length})</span>
               </p>
               <ul>
                 {
-                  groupedItems[key].map(function (item: SidebarChatListItemProps) {
-                    return <SidebarChatListItem key={key} name={item.name} imageUrl={item.imageUrl} status={item.status}/>
+                  groupedItems[key].map(function (item: SidebarChatListItemProps, i) {
+                    return <SidebarChatListItem key={i} name={item.name} imageUrl={item.imageUrl} status={item.status}/>
                   })
                 }
               </ul>
