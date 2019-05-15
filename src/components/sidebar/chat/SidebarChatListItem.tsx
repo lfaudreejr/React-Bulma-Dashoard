@@ -12,7 +12,7 @@ function SidebarChatListItem(props: SidebarChatListItemProps) {
     <li className="menu-item">
       <a className="nav-link" onClick={() => {}}>
         <span>
-          <img src={props.imageUrl} alt="{props.name}" className={`sidebar-chat-image ${props.status}`}/>
+          <img src={props.imageUrl} alt={props.name} className={`sidebar-chat-image ${props.status}`}/>
         </span>
         <span className="ml-1 name">{props.name}</span>
       </a>

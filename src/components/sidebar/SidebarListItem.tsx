@@ -40,7 +40,7 @@ function SidebarListItem(props: SidebarListItemProps) {
       <a onClick={() => setToggle(!toggle)} className="nav-link">
         <span className="sidebar-icon"><FontAwesomeIcon icon={props.icon} /></span>
         <span className="ml-1 name">{props.name}{ props.moreLinks ? <span className="ml-1 count" style={{backgroundColor: "#2EB398"}}>{props.moreLinks.length}</span> : null }</span>
-        { props.moreLinks ? toggle ? <span><FontAwesomeIcon icon="chevron-down" fixed-width /></span> : <span><FontAwesomeIcon icon="chevron-left" fixed-width /></span> : null }
+        { props.moreLinks ? toggle ? <span><FontAwesomeIcon icon="chevron-down" fixed-width="true" /></span> : <span><FontAwesomeIcon icon="chevron-left" fixed-width="true" /></span> : null }
       </a>
       {toggle ? moreLinks(props) : null}
     </li>
