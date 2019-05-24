@@ -1,4 +1,25 @@
 $radius-round: 50%
 $radius-default: 4px
 
-$theme-blue: #4f80b4
+$theme-blue: #2980b9
+$theme-orange: #ef5350
+$theme-green: #27ae60
+$theme-purple: #8e44ad
+$theme-yellow: #f1c40f
+$theme-brown: #d35400
+
+$navbar-grey: #2c3e50
+
+$primary-color: $theme-blue
+
+$themes: ('blue': #2980b9, 'orange': #ef5350, 'green': #27ae60, 'purple': #8e44ad, 'yellow': #f1c40f, 'brown': #d35400)
+
+@each $name, $color in $themes
+  .theme-bg-#{$name}
+    background-color: $color
+  .theme-hover-#{$name}:hover
+    background-color: scale-color($color, $lightness: -35%)
+  .theme-bg-darker-#{$name}
+    background-color: scale-color($color, $lightness: -25%)
+  .theme-color-#{$name}
+    color: $color

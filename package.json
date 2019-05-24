@@ -12,12 +12,16 @@
     "@types/node": "10.12.24",
     "@types/react": "16.8.2",
     "@types/react-dom": "16.8.0",
+    "@types/react-transition-group": "^2.9.1",
+    "animate.css": "^3.7.0",
     "bulma": "0.7.4",
     "lodash": "^4.17.11",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "react-scripts": "2.1.4",
-    "typescript": "3.3.3"
+    "react-transition-group": "^4.0.1",
+    "typescript": "3.3.3",
+    "use-global-hook": "^0.1.7"
   },
   "scripts": {
     "start": "react-scripts start",

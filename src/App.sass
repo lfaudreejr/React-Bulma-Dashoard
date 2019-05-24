@@ -12,9 +12,23 @@
 .max-height
   height: 100%
 
+.app-container
+  display: flex
+  width: 100%
+  .sidebar-container
+    position: fixed
+    width: 278px
+    left: -278px
+    transition: left .5s ease
+  .content-container
+    position: fixed
+    width: 100%
+    left: 0
+    transition: left .5s ease
+
 .navbar
   min-height: 75px
-  background-color: #33414b !important
+  background-color: $navbar-grey !important
 
   .navbar-item
     font-size: 22px
@@ -34,8 +48,14 @@
   height: 20px
   width: 20px
 
-  &.theme-blue
-    background-color: $theme-blue
+@media (min-width: 1095px)
+  .app-container
+    .sidebar-container
+      width: 278px
+      left: 0
+    .content-container
+      width: calc(100% - 278px)
+      left: 278px
 
 @for $i from 0 through 5
   .p-#{$i} { padding: 1em * $i }
