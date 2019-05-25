@@ -38,7 +38,7 @@ function SidebarTabs(props: Object) {
 		}
 	];
 	const [ activeTab, setActiveTab ] = useState(tabs[0]);
-	const CurrentTab = activeTab.content;
+	const activeIndex = tabs.findIndex(tab => tab.name === activeTab.name)
 
 	return (
 		<div className="app-sidebar__tabs">
@@ -56,7 +56,15 @@ function SidebarTabs(props: Object) {
 				})}
 			</ul>
 			<div className="app-sidebar__tabs__content">
-				<CurrentTab />
+				{ tabs.map((tab, index) => {
+						const Content = tab.content
+						const left = index === activeIndex ? 0 : index < activeIndex ? Math.round(100 * (index - activeIndex)) : Math.round(100 * (0 + index))
+						const style = {
+							'left': left + '%'
+						}
+						return <div style={style} className={'sidebar'}><Content/></div>
+					})
+				}
 			</div>
 		</div>
 	);

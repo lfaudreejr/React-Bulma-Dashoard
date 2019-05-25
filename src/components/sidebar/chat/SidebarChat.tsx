@@ -37,7 +37,7 @@ const items: SidebarChatItemProps[] = [
 ];
 const groupedItems = _.groupBy(items, 'status');
 
-function SidebarChat(props: Object) {
+function SidebarChat(props: any) {
   return (
     <div className="sidebar-chat app-sidebar__content-container">
       <div className="sidebar-chat__content app-sidebar__nav-content">

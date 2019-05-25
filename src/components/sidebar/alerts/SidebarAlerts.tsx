@@ -1,6 +1,6 @@
 import React from 'react';
 
-function SidebarAlerts (props: Object) {
+function SidebarAlerts (props: any) {
   return (
     <h1>Alerts</h1>
   )

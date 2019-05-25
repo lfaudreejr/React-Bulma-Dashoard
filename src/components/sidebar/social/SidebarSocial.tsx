@@ -1,7 +1,7 @@
 import React from 'react';
 import './SidebarSocial.sass';
 
-function SidebarSocial (props: Object) {
+function SidebarSocial (props: any) {
   return (
     <div className="sidebar-overview">
       <div className="sidebar-overview__content">

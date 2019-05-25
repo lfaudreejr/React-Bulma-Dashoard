@@ -22,7 +22,7 @@ function ModalColorSelect(props: ModalColorSelectProps) {
       classNames='fader'
       in={props.active}
       unmountOnExit
-      timeout={200}>
+      timeout={400}>
       <div className={"modal is-active"}>
         <div className="modal-background" onClick={() => props.toggleModal()}></div>
         <div className="modal-card">
