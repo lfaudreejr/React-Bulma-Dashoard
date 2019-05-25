@@ -21,17 +21,20 @@ function AppNavbar() {
             </div>
           </div>
           <div className="navbar-section-divider"></div>
-          <div className="navbar-item navbar-section has-dropdown is-hoverable">
-            <a className="navbar-link is-arrowless">
-              <img src={USLogo} alt="United States Flag" />
-            </a>
-            <div className="navbar-dropdown is-boxed">
-              <a className="navbar-item">
+          <div className="navbar-section">
+            <div className="navbar-item has-dropdown is-hoverable">
+              <a className="navbar-link is-arrowless">
                 <img src={USLogo} alt="United States Flag" />
-                <span className="ml-1"> English - U.S.</span>
               </a>
+              <div className={"navbar-dropdown is-right theme-border-color-" + globalState.color + " theme-navbar-menu-caret-" + globalState.color}>
+                <a className="navbar-item">
+                  <img src={USLogo} alt="United States Flag" />
+                  <span className="ml-1"> English - U.S.</span>
+                </a>
+              </div>
             </div>
           </div>
+          
           <div className="navbar-section-divider"></div>
           <div className="navbar-section">
             <div className="navbar-item">
@@ -39,12 +42,23 @@ function AppNavbar() {
                 <FontAwesomeIcon icon="user"></FontAwesomeIcon>
               </span>
             </div>
-            <div className="navbar-item">
-              <span className="has-text-grey-light">
-                <FontAwesomeIcon icon="cog"></FontAwesomeIcon>
-              </span>
+          </div>
+          <div className="navbar-section">
+            <div className="navbar-item has-dropdown is-hoverable">
+              <a className="navbar-link is-arrowless">
+                <span className="has-text-grey-light">
+                  <FontAwesomeIcon icon="cog"></FontAwesomeIcon>
+                </span>
+              </a>
+              <div className={"navbar-dropdown is-right theme-border-color-" + globalState.color + " theme-navbar-menu-caret-" + globalState.color}>
+                <a className="navbar-item">
+                  <img src={USLogo} alt="United States Flag" />
+                  <span className="ml-1"> English - U.S.</span>
+                </a>
+              </div>
             </div>
           </div>
+          
           <div className="navbar-section-divider"></div>
           <div className="navbar-section">
             <div className="navbar-item">

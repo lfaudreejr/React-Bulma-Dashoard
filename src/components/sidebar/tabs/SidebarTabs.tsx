@@ -62,7 +62,7 @@ function SidebarTabs(props: Object) {
 						const style = {
 							'left': left + '%'
 						}
-						return <div style={style} className={'sidebar'}><Content/></div>
+						return <div style={style} className={'sidebar'} key={index}><Content/></div>
 					})
 				}
 			</div>

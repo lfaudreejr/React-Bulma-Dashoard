@@ -23,3 +23,8 @@ $themes: ('blue': #2980b9, 'orange': #ef5350, 'green': #27ae60, 'purple': #8e44a
     background-color: scale-color($color, $lightness: -25%)
   .theme-color-#{$name}
     color: $color
+  .theme-border-color-#{$name}
+    border-color: $color
+  .theme-navbar-menu-caret-#{$name}
+    &::after
+      border-color: $color

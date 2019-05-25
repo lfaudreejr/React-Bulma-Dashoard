@@ -3,6 +3,19 @@
   height: 50px
   border-radius: 4px
 
+.navbar-dropdown
+  border-top: 5px solid
+  top: 55px
+  // right: 1.5rem
+  &::after
+    top: -14px
+    right: 0.7rem
+    content: ''
+    position: absolute
+    border-left: 12px solid transparent !important
+    border-right: 12px solid transparent !important
+    border-bottom: 12px solid
+
 .fader-enter
   .modal-card
     opacity: 0

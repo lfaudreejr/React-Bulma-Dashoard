@@ -21,7 +21,7 @@ function Sidebar(props: object) {
 						<div className="progress-bar__progress" />
 					</div>
 				</div>
-				<div className="lock" onClick={() => updateLock(!isLocked)}>
+				<div className={`lock theme-hover-${globalState.color}`} onClick={() => updateLock(!isLocked)}>
 					{
 						isLocked ? <FontAwesomeIcon icon={[ 'fas', 'lock' ]} /> : <FontAwesomeIcon icon={[ 'fas', 'unlock' ]} />
 					}
