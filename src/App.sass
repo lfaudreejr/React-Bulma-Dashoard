@@ -40,9 +40,11 @@
   .navbar-section
     display: flex
     justify-content: center
-    padding: 20px
+    padding: 0 20px
     max-height: 75px
-    & + .navbar-section
+    &.ns-user
+      padding-right: 0
+    &.ns-setting
       padding-left: 0
 
 .theme-icon

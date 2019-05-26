@@ -27,6 +27,9 @@ function AppNavbar() {
                 <img src={USLogo} alt="United States Flag" />
               </a>
               <div className={"navbar-dropdown is-right theme-border-color-" + globalState.color + " theme-navbar-menu-caret-" + globalState.color}>
+                <div className="dropdown-header">
+                  <h3>CHOOSE A LOCALE</h3>
+                </div>
                 <a className="navbar-item">
                   <img src={USLogo} alt="United States Flag" />
                   <span className="ml-1"> English - U.S.</span>
@@ -36,21 +39,24 @@ function AppNavbar() {
           </div>
           
           <div className="navbar-section-divider"></div>
-          <div className="navbar-section">
+          <div className="navbar-section ns-user">
             <div className="navbar-item">
               <span className="has-text-grey-light">
-                <FontAwesomeIcon icon="user"></FontAwesomeIcon>
+                <FontAwesomeIcon icon="user" fixedWidth></FontAwesomeIcon>
               </span>
             </div>
           </div>
-          <div className="navbar-section">
+          <div className="navbar-section ns-setting">
             <div className="navbar-item has-dropdown is-hoverable">
               <a className="navbar-link is-arrowless">
                 <span className="has-text-grey-light">
-                  <FontAwesomeIcon icon="cog"></FontAwesomeIcon>
+                  <FontAwesomeIcon icon="cog" fixedWidth></FontAwesomeIcon>
                 </span>
               </a>
               <div className={"navbar-dropdown is-right theme-border-color-" + globalState.color + " theme-navbar-menu-caret-" + globalState.color}>
+                <div className="dropdown-header">
+                  <h3>DIMENSIONS</h3>
+                </div>
                 <a className="navbar-item">
                   <img src={USLogo} alt="United States Flag" />
                   <span className="ml-1"> English - U.S.</span>
@@ -63,25 +69,47 @@ function AppNavbar() {
           <div className="navbar-section">
             <div className="navbar-item">
               <span className="has-text-grey-light">
-                <FontAwesomeIcon icon="envelope"></FontAwesomeIcon>
+                <FontAwesomeIcon icon="envelope" fixedWidth></FontAwesomeIcon>
               </span>
             </div>
-            <div className="navbar-item">
-              <span className="has-text-grey-light">
-                <FontAwesomeIcon icon="bullhorn"></FontAwesomeIcon>
-              </span>
+            <div className="navbar-item has-dropdown is-hoverable">
+              <div className="navbar-link is-arrowless">
+                <span className="has-text-grey-light">
+                  <FontAwesomeIcon icon="bullhorn" fixedWidth></FontAwesomeIcon>
+                </span>
+              </div>
+              <div className={"navbar-dropdown is-right theme-border-color-" + globalState.color + " theme-navbar-menu-caret-" + globalState.color}>
+                <div className="dropdown-header">
+                  <h3>YOUR NOTIFICATIONS</h3>
+                </div>
+                <a className="navbar-item">
+                  <img src={USLogo} alt="United States Flag" />
+                  <span className="ml-1"> English - U.S.</span>
+                </a>
+              </div>
             </div>
-            <div className="navbar-item">
-              <span className="has-text-grey-light">
-                <FontAwesomeIcon icon="rss"></FontAwesomeIcon>
-              </span>
+            <div className="navbar-item has-dropdown is-hoverable">
+              <div className="navbar-link is-arrowless">
+                <span className="has-text-grey-light">
+                  <FontAwesomeIcon icon="rss" fixedWidth></FontAwesomeIcon>
+                </span>
+              </div>
+              <div className={"navbar-dropdown is-right theme-border-color-" + globalState.color + " theme-navbar-menu-caret-" + globalState.color}>
+                <div className="dropdown-header">
+                  <h3>YOUR NEWS FEED</h3>
+                </div>
+                <a className="navbar-item">
+                  <img src={USLogo} alt="United States Flag" />
+                  <span className="ml-1"> English - U.S.</span>
+                </a>
+              </div>
             </div>
           </div>
           <div className="navbar-section-divider"></div>
           <a className="navbar-section has-background-danger">
             <div className="navbar-item">
               <span className="has-text-light">
-                <FontAwesomeIcon icon="power-off"></FontAwesomeIcon>
+                <FontAwesomeIcon icon="power-off" fixedWidth></FontAwesomeIcon>
               </span>
             </div>
           </a>
