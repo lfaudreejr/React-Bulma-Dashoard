@@ -20,6 +20,7 @@
     "react-dom": "^16.8.1",
     "react-scripts": "2.1.4",
     "react-transition-group": "^4.0.1",
+    "simplebar-react": "^1.0.0",
     "typescript": "3.3.3",
     "use-global-hook": "^0.1.7"
   },

@@ -41,7 +41,7 @@ function AppNavbar() {
           <div className="navbar-section-divider"></div>
           <div className="navbar-section ns-user">
             <div className="navbar-item">
-              <span className="has-text-grey-light">
+              <span className="has-text-grey-light has-hover-text-white">
                 <FontAwesomeIcon icon="user" fixedWidth></FontAwesomeIcon>
               </span>
             </div>
@@ -49,7 +49,7 @@ function AppNavbar() {
           <div className="navbar-section ns-setting">
             <div className="navbar-item has-dropdown is-hoverable">
               <a className="navbar-link is-arrowless">
-                <span className="has-text-grey-light">
+                <span className="has-text-grey-light has-hover-text-white">
                   <FontAwesomeIcon icon="cog" fixedWidth></FontAwesomeIcon>
                 </span>
               </a>
@@ -68,13 +68,13 @@ function AppNavbar() {
           <div className="navbar-section-divider"></div>
           <div className="navbar-section">
             <div className="navbar-item">
-              <span className="has-text-grey-light">
+              <span className="has-text-grey-light has-hover-text-white">
                 <FontAwesomeIcon icon="envelope" fixedWidth></FontAwesomeIcon>
               </span>
             </div>
             <div className="navbar-item has-dropdown is-hoverable">
               <div className="navbar-link is-arrowless">
-                <span className="has-text-grey-light">
+                <span className="has-text-grey-light has-hover-text-white">
                   <FontAwesomeIcon icon="bullhorn" fixedWidth></FontAwesomeIcon>
                 </span>
               </div>
@@ -90,7 +90,7 @@ function AppNavbar() {
             </div>
             <div className="navbar-item has-dropdown is-hoverable">
               <div className="navbar-link is-arrowless">
-                <span className="has-text-grey-light">
+                <span className="has-text-grey-light has-hover-text-white">
                   <FontAwesomeIcon icon="rss" fixedWidth></FontAwesomeIcon>
                 </span>
               </div>
@@ -108,7 +108,7 @@ function AppNavbar() {
           <div className="navbar-section-divider"></div>
           <a className="navbar-section has-background-danger">
             <div className="navbar-item">
-              <span className="has-text-light">
+              <span className="has-text-light has-hover-text-white">
                 <FontAwesomeIcon icon="power-off" fixedWidth></FontAwesomeIcon>
               </span>
             </div>

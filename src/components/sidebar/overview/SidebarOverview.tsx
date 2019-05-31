@@ -77,7 +77,7 @@ const items: { [key: string]: SidebarListItemProps[] } = {
 
 function SidebarOverview(props: Object) {
 	return (
-		<div className="sidebar-overview app-sidebar__content-container">
+		<div className="sidebar-overview app-sidebar__content-container" data-simplebar>
 			<div className="sidebar-overview__search">
 				<input className="input sidebar-search" type="text" placeholder="Search..." />
 			</div>

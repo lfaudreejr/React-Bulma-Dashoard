@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Sidebar from './components/sidebar/Sidebar';
 import AppNavbar from './components/navbar/AppNavbar'
+import 'simplebar'; // or "import SimpleBar from 'simplebar';" if you want to use it manually.
+import 'simplebar/dist/simplebar.css';
 import './App.sass';
 
 import { library } from '@fortawesome/fontawesome-svg-core';

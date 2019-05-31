@@ -57,7 +57,7 @@ const groupedItems = _.groupBy(items, 'status');
 
 function SidebarChat(props: any) {
   return (
-    <div className="sidebar-chat app-sidebar__content-container">
+    <div className="sidebar-chat app-sidebar__content-container" data-simplebar>
       <div className="sidebar-chat__content app-sidebar__nav-content">
         {Object.keys(groupedItems).map((key, index) => {
           return (
