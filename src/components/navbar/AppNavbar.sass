@@ -3,9 +3,16 @@
   height: 50px
   border-radius: 4px
 
+.app-navbar
+  .navbar-link
+    background-color: transparent !important
+    &:hover
+      background-color: transparent !important
+
 .navbar-dropdown
   border-top: 5px solid
   top: 75px
+  width: 300px
   // right: 1.5rem
   &::after
     top: -14px
@@ -22,6 +29,10 @@
     border-bottom: 1px solid #f2f2f2
     background-color: #F9FAFB
     font-variant: unicase
+  .navbar-item.themed
+    color: #fff
+    &:hover
+      color: #fff
 
 .navbar-item
   cursor: pointer

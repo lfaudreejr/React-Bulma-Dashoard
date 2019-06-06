@@ -8,8 +8,11 @@ function AppNavbar() {
   const [showColorModal, toggleColorModal] = useState(false)
   const [globalState, globalActions] = useGlobal()
 
+  const selectedItemClass = 'theme-bg-' + globalState.color + ' theme-hover-' + globalState.color + ' themed'
+  const getSelectedClass = (prop: string, state: string) => globalState[prop] === state ? selectedItemClass : null
+
   return (
-    <nav className="navbar app-navbar is-transparent is-dark" role="navigation">
+    <nav className="navbar app-navbar is-dark" role="navigation">
       <ModalColorSelect active={showColorModal} toggleModal={() => toggleColorModal(!showColorModal)}></ModalColorSelect>
       <div className="navbar-menu">
         <div className="navbar-start" />
@@ -30,7 +33,7 @@ function AppNavbar() {
                 <div className="dropdown-header">
                   <h3>CHOOSE A LOCALE</h3>
                 </div>
-                <a className="navbar-item">
+                <a className={"navbar-item is-size-6 " + getSelectedClass('locale', 'us')}>
                   <img src={USLogo} alt="United States Flag" />
                   <span className="ml-1"> English - U.S.</span>
                 </a>
@@ -57,9 +60,11 @@ function AppNavbar() {
                 <div className="dropdown-header">
                   <h3>DIMENSIONS</h3>
                 </div>
-                <a className="navbar-item">
-                  <img src={USLogo} alt="United States Flag" />
-                  <span className="ml-1"> English - U.S.</span>
+                <a className={"navbar-item is-size-6 " + getSelectedClass('dimension', 'fluid')} onClick={() => globalActions.setDimension('fluid')}>
+                  <span className="ml-1">Fluid</span>
+                </a>
+                <a className={"navbar-item is-size-6 " + getSelectedClass('dimension', 'boxed')} onClick={() => globalActions.setDimension('boxed')}>
+                  <span className="ml-1">Boxed (900px)</span>
                 </a>
               </div>
             </div>

@@ -18,7 +18,7 @@ $themes: ('blue': #0277bd, 'orange': #ef5350, 'green': #2e7d32, 'purple': #6a1b9
   .theme-bg-#{$name}
     background-color: $color
   .theme-hover-#{$name}:hover
-    background-color: scale-color($color, $lightness: -35%)
+    background-color: scale-color($color, $lightness: -35%) !important
   .theme-bg-darker-#{$name}
     background-color: scale-color($color, $lightness: -25%)
   .theme-color-#{$name}

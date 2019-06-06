@@ -25,7 +25,30 @@
     width: 100%
     left: 0
     transition: left .5s ease
-
+  &.boxed
+    width: 990px
+    margin: 0 auto
+    position: relative
+    box-shadow: 0 0 15px rgba(0,0,0,0.5)
+    .sidebar-container
+      // top: 75px
+      bottom: 0
+      left: 0
+      position: absolute
+      .app-sidebar__header
+        position: absolute
+        width: 100%
+      .app-sidebar__content
+        height: 100%
+      .app-sidebar__tabs__wrapper
+        position: absolute
+        width: 100%
+      .app-sidebar__tabs__content
+        top: 135px
+    .content-container
+      width: inherit
+      left: 50%
+      transform: translateX(-50%)
 .navbar
   min-height: 75px
   background-color: $navbar-grey !important

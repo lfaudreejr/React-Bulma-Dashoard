@@ -9,23 +9,44 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 
+import useGlobal from './store/state'
+
 library.add(fab);
 library.add(fas);
-class App extends Component {
-	render() {
-		return (
-			<div className="App">
-				<div className="app-container max-height m-0 p-0">
-					<div className="sidebar-container m-0 p-0">
-						<Sidebar />
-					</div>
-					<div className="content-container m-0 p-0">
-						<AppNavbar/>
-					</div>
+
+// class App extends Component {
+// 	render() {
+// 		return (
+// 			<div className={"App " + globalState.dimension === 'boxed' ? "boxed" : ""}>
+// 				<div className="app-container max-height m-0 p-0">
+// 					<div className="sidebar-container m-0 p-0">
+// 						<Sidebar />
+// 					</div>
+// 					<div className="content-container m-0 p-0">
+// 						<AppNavbar/>
+// 					</div>
+// 				</div>
+// 			</div>
+// 		);
+// 	}
+// }
+
+function App () {
+	const [globalState, globalActions] = useGlobal()
+	const boxedClass = globalState.dimension === 'boxed' ? "boxed" : ""
+
+	return (
+		<div className="App ">
+			<div className={"app-container max-height m-0 p-0 " + boxedClass}>
+				<div className="sidebar-container m-0 p-0">
+					<Sidebar />
+				</div>
+				<div className="content-container m-0 p-0">
+					<AppNavbar/>
 				</div>
 			</div>
-		);
-	}
+		</div>
+	);
 }
 
 export default App;
