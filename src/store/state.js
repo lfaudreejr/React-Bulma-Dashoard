@@ -4,7 +4,8 @@ import useGlobalHook from "use-global-hook"
 const state = {
   color: 'blue',
   dimension: 'fluid',
-  locale: 'us'
+  locale: 'us',
+  sidebar: false
 }
 
 const actions = {
@@ -18,6 +19,10 @@ const actions = {
   setLocale (store, locale) {
     // locale = 'us'
     store.setState({locale})
+  },
+  setSidebar (store, sidebar) {
+    // show = true/false
+    store.setState({sidebar})
   }
 }
 

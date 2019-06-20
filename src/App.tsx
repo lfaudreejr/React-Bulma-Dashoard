@@ -34,10 +34,13 @@ library.add(fas);
 function App () {
 	const [globalState, globalActions] = useGlobal()
 	const boxedClass = globalState.dimension === 'boxed' ? "boxed" : ""
+	const showSidebarClass = globalState.sidebar ? 'show-sidebar' : ''
+
+	console.log('showSidebarClass', showSidebarClass)
 
 	return (
 		<div className="App ">
-			<div className={"app-container max-height m-0 p-0 " + boxedClass}>
+			<div className={"app-container max-height m-0 p-0 " + boxedClass + " " + showSidebarClass}>
 				<div className="sidebar-container m-0 p-0">
 					<Sidebar />
 				</div>

@@ -78,7 +78,15 @@
 .has-hover-text-white:hover
   color: #fff !important
 
-@media (min-width: 1095px)
+// toggle sidebar when hidden on < 768px
+.show-sidebar
+  .sidebar-container
+    width: 278px
+    left: 0
+  .content-container
+    width: calc(100% - 278px)
+    left: 278px
+@media (min-width: 1024px)
   .app-container
     .sidebar-container
       width: 278px

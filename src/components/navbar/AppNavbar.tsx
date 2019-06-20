@@ -7,13 +7,24 @@ import useGlobal from './../../store/state'
 function AppNavbar() {
   const [showColorModal, toggleColorModal] = useState(false)
   const [globalState, globalActions] = useGlobal()
+  const [menuActive, setMenu] = useState(false)
 
   const selectedItemClass = 'theme-bg-' + globalState.color + ' theme-hover-' + globalState.color + ' themed'
   const getSelectedClass = (prop: string, state: string) => globalState[prop] === state ? selectedItemClass : null
 
+  function burgerClick () {
+    globalActions.setSidebar(!globalState.sidebar)
+    setMenu(!menuActive)
+  }
+
   return (
     <nav className="navbar app-navbar is-dark" role="navigation">
       <ModalColorSelect active={showColorModal} toggleModal={() => toggleColorModal(!showColorModal)}></ModalColorSelect>
+      <div className="hamburger-menu" onClick={() => burgerClick()}>
+        {
+          menuActive ? <FontAwesomeIcon icon="times-circle"></FontAwesomeIcon> : <FontAwesomeIcon icon="bars"></FontAwesomeIcon>
+        }
+      </div>
       <div className="navbar-menu">
         <div className="navbar-start" />
         <div className="navbar-end">
@@ -111,15 +122,15 @@ function AppNavbar() {
             </div>
           </div>
           <div className="navbar-section-divider"></div>
-          <a className="navbar-section has-background-danger">
-            <div className="navbar-item">
-              <span className="has-text-light has-hover-text-white">
-                <FontAwesomeIcon icon="power-off" fixedWidth></FontAwesomeIcon>
-              </span>
-            </div>
-          </a>
         </div>
       </div>
+      <a className="navbar-section has-background-danger navbar-power">
+        <div className="navbar-item">
+          <span className="has-text-light has-hover-text-white">
+            <FontAwesomeIcon icon="power-off" fixedWidth></FontAwesomeIcon>
+          </span>
+        </div>
+      </a>
     </nav>
   )
 }
